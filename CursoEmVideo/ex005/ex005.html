@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area {
+            background-color: green;
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20pt;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseleave="sair()">
+        Interaja... 
+    </div>
+
+    <script>
+        function clicar() {
+            var a = document.querySelector('div#area')
+            a.innerHTML = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar() {
+            var a = document.querySelector('div#area')
+            a.innerHTML = 'Entrou!'
+        }
+        function sair() {
+            var a = document.querySelector('div#area')
+            a.innerHTML = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
