@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(102, 149, 192);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o <strong>resultado</strong></p>
+    <div>Clique em mim</div> <br>
+    <script>
+        var p1 = document.getElementsByTagName('p')[0]
+         window.document.write(p1.innerText + '</br>')
+         document.write(p1.innerHTML)
+         p1.style.color = 'blue'
+    </script>
 </body>
 </html>
