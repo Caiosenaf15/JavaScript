@@ -5,35 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testes</title>
     <style>
+        div#blocoCores {
+            display: block;
+            background-color: rgb(224, 223, 223);
+            border-radius: 10px;
+            translate: 50vw;
+            transform: translateX(-50%);
+            width: 340px;
+            height: 110px;
+        }
         button {
             display: inline-flex;
-            translate: 40vw;
             width: 100px;
             height: 100px;
             margin: 5px;
             padding: 10px;
             border: 0px;
-            background-color: black;
+            background-color: rgb(97, 97, 97);
             color: white;
             border-radius: 10px;
             font-size: 1.8em;
             cursor: pointer;
         }
         button:hover {
-            background-color: rgb(85, 85, 85);
+            background-color: rgb(59, 59, 59);
             transition: 0.3s;
         }
 
     </style>
 </head>
 <body>
-    <button onclick="mudarCor('red')">Red</button>
-    <button onclick="mudarCor('green')">Green</button>
-    <button onclick="mudarCor('blue')">Blue</button>
+    <div id="blocoCores">
+        <button onclick="mudarCor('red')">Red</button>
+        <button onclick="mudarCor('green')">Green</button>
+        <button onclick="mudarCor('blue')">Blue</button>
+    </div>
+    
     <script>
         function mudarCor(cor) {
             var a = cor
-            console.log(a)
             document.body.style.backgroundColor = a
             document.body.style.transition = '0.5s'
         }
