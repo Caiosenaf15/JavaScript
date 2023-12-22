@@ -4,18 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testes</title>
+    <style>
+        button {
+            display: inline-flex;
+            translate: 40vw;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            padding: 10px;
+            border: 0px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            font-size: 1.8em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(85, 85, 85);
+            transition: 0.3s;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Área de testes</h1>
-    <button id="botao_teste" onclick="calcule(recebe(6))">Teste</button>
+    <button onclick="mudarCor('red')">Red</button>
+    <button onclick="mudarCor('green')">Green</button>
+    <button onclick="mudarCor('blue')">Blue</button>
     <script>
-        function calcule(val){
-            var n1 = val
-            function recebe(val2) {
-                var n2 = val
-            }
-            document.write(n1 + "</br>")
-            document.write("Caco")
+        function mudarCor(cor) {
+            var a = cor
+            console.log(a)
+            document.body.style.backgroundColor = a
+            document.body.style.transition = '0.5s'
         }
     </script>
 </body>
