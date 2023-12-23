@@ -9,7 +9,7 @@
 <body>
     <h1>Casa de Cambio</h1>
     <form id="formuario">
-        <input type="number" name="moedaUsuario" id="iusu">
+        <input type="number" name="moedaUsuario" id="iusu" placeholder="Valor" autofocus value="1.00">
         <button onclick="enviar(1)">Dolar</button>
         <button onclick="enviar(2)">Euro</button> <br>
     </form>
@@ -25,6 +25,7 @@
             }
             var calc = valor * cambio
             document.write(calc.toFixed(2))
+            
         }
     </script>
 </body>
