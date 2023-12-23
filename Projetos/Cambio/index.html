@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,25 @@
     <title>Cambio</title>
 </head>
 <body>
-    
+    <h1>Casa de Cambio</h1>
+    <form id="formuario">
+        <input type="number" name="moedaUsuario" id="iusu">
+        <button onclick="enviar(1)">Dolar</button>
+        <button onclick="enviar(2)">Euro</button> <br>
+    </form>
+
+    <script>
+        function enviar(moeda){
+            var valor = document.getElementById("iusu").value
+            var cambio = 0
+            if(moeda == 1){
+                cambio = 4.89
+            } else {
+                cambio = 5.39
+            }
+            var calc = valor * cambio
+            document.write(calc.toFixed(2))
+        }
+    </script>
 </body>
 </html>

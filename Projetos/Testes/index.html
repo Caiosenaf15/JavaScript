@@ -6,20 +6,21 @@
     <title>Testes</title>
     <style>
         div#blocoCores {
-            display: block;
+            display: inline-flex;
             background-color: rgb(224, 223, 223);
             border-radius: 10px;
             translate: 50vw;
             transform: translateX(-50%);
-            width: 340px;
-            height: 110px;
+            width: 450px;
+            height: 160px;
         }
         button {
-            display: inline-flex;
-            width: 100px;
-            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
             margin: 5px;
-            padding: 10px;
             border: 0px;
             background-color: rgb(97, 97, 97);
             color: white;
@@ -44,7 +45,7 @@
     <script>
         function mudarCor(cor) {
             var a = cor
-            document.body.style.backgroundColor = a
+            document.body.style.backgroundColor = a 
             document.body.style.transition = '0.5s'
         }
     </script>
