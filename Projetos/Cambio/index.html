@@ -12,21 +12,23 @@
         <input type="number" name="moedaUsuario" id="iusu" placeholder="Valor" autofocus value="1.00">
         <button onclick="enviar(1)">Dolar</button>
         <button onclick="enviar(2)">Euro</button> <br>
+        
     </form>
 
     <script>
+        var calc
         function enviar(moeda){
             var valor = document.getElementById("iusu").value
-            var cambio = 0
             if(moeda == 1){
                 cambio = 4.89
             } else {
                 cambio = 5.39
             }
-            var calc = valor * cambio
-            document.write(calc.toFixed(2))
-            
+            calc = valor * cambio
         }
+        val = calc
+        alert(valor)
+        document.write(val.toFixed(2))
     </script>
 </body>
 </html>

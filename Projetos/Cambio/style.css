@@ -46,6 +46,7 @@ button {
     font-size: 2em;
     border: 0px;
     border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.274);
     cursor: pointer;
 }
 
