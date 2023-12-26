@@ -8,11 +8,11 @@
 </head>
 <body>
     <h1>Casa de Cambio</h1>
-    <div id="resultado">A</div>
+    <div id="resultado"></div>
     <form id="formuario">
-        <input type="number" name="moedaUsuario" id="iusu" placeholder="Valor">
-        <button onclick="enviar(1)">Dolar</button>
-        <button onclick="enviar(2)">Euro</button> <br>
+        <input type="number" name="moedaUsuario" id="iusu" placeholder="Valor" autofocus value="1.00">
+        <input type="button" value="Dolar" class="botoes" id="botaoDolar" onclick="enviar(1)">
+        <input type="button" value="Euro" class="botoes" id="botaoEuro" onclick="enviar(2)">
     </form>
     <script>
         function enviar(moeda){
@@ -25,10 +25,10 @@
                 var tipo = "euro"
                 var cambio = 5.39
             }
-            numero = Number(valor.value)
-            var num2 =  Number(cambio.value)
-            var calc = numero
-            res.innerHTML = `A conversão de ${tipo} para real é: ${numero}`
+            var numero = Number(valor)
+            var num2 =  Number(cambio)
+            var calc = numero * num2
+            res.innerHTML = `A conversão de <strong>${tipo}</strong> para <strong>real</strong> é: R$ ${calc.toFixed(2)}`
 }
     </script>
 </body>
