@@ -1,16 +1,15 @@
-var cambio = 0
-var calc = 0
-var valor = 0
-
 function enviar(moeda){
-    valor = document.getElementById("iusu").value
+    var valor = document.getElementById('iusu').value
+    var res = document.getElementById('resultado')
     if(moeda == 1){
-        cambio = 4.89
+        var tipo = "dólar"
+        var cambio = 4.89
     } else {
-        cambio = 5.39
+        var tipo = "euro"
+        var cambio = 5.39
     }
-    calc = valor * cambio
+    var numero = Number(valor.valueOf)
+    var num2 =  Number(cambio.valueOf)
+    var calc = numero * num2
+    res.innerHTML = `A conversão de ${tipo} para real é: R$ ${calc}`
 }
-var val = calc
-alert(valor)
-document.write(val.toFixed(2))

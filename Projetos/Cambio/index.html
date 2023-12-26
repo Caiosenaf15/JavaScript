@@ -4,16 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="cambio.js" defer></script>
     <title>Cambio</title>
 </head>
 <body>
     <h1>Casa de Cambio</h1>
+    <div id="resultado">A</div>
     <form id="formuario">
-        <input type="number" name="moedaUsuario" id="iusu" placeholder="Valor" autofocus value="1.00">
+        <input type="number" name="moedaUsuario" id="iusu" placeholder="Valor">
         <button onclick="enviar(1)">Dolar</button>
         <button onclick="enviar(2)">Euro</button> <br>
-        
     </form>
+    <script>
+        function enviar(moeda){
+            var valor = document.getElementById('iusu').value
+            var res = document.getElementById('resultado')
+            if(moeda == 1){
+                var tipo = "dólar"
+                var cambio = 4.89
+            } else {
+                var tipo = "euro"
+                var cambio = 5.39
+            }
+            numero = Number(valor.value)
+            var num2 =  Number(cambio.value)
+            var calc = numero
+            res.innerHTML = `A conversão de ${tipo} para real é: ${numero}`
+}
+    </script>
 </body>
 </html>

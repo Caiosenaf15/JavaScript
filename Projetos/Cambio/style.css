@@ -20,6 +20,15 @@ body > h1 {
     align-items: center;
 }
 
+div#resultado {
+    display: block;
+    position: absolute;
+    align-items: center;
+    top: 30vh;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+
 input {
     position: absolute;
     top: 40vh;
