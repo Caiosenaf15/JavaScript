@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="cambio.js" defer></script>
     <title>Cambio</title>
 </head>
 <body>
@@ -14,21 +15,5 @@
         <button onclick="enviar(2)">Euro</button> <br>
         
     </form>
-
-    <script>
-        var calc
-        function enviar(moeda){
-            var valor = document.getElementById("iusu").value
-            if(moeda == 1){
-                cambio = 4.89
-            } else {
-                cambio = 5.39
-            }
-            calc = valor * cambio
-        }
-        val = calc
-        alert(valor)
-        document.write(val.toFixed(2))
-    </script>
 </body>
 </html>
