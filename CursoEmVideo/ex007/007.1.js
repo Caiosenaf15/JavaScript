@@ -1,6 +1,6 @@
 var pais = 'Brasil'
 if(pais == 'Brasil') {
     console.log(`Brasileiro!`)
-} else {
+} else { // Condição composta
     console.log(`Estrangeiro`)
 }
