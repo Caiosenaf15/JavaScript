@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="javascript" href="script.js">
     <title>Hora do Dia</title>
 </head>
 <body>
     <h1>Hora do dia</h1>
     <div id="conteudo">
-        <div id="horas">ad</div>
-        <div id="imagem"></div>
+        <div id="horas"></div>
+        <div id="imagem">
+            <img src="" alt="">
+        </div>
     </div>
     <h3>@Caiosenaf</h3>
+    <script>
+        var d = new Date()
+        var horas = d.getHours().toString().padStart(2, '0') + ':' + d.getMinutes().toString().padStart(2, '0');
+        var hora = d.getHours()
+        var res = document.getElementById('horas')
+        res.innerHTML = `Agora são: ${horas}`
+        if(hora < 12){
+            document.body.style.backgroundColor = 'rgb(252, 225, 190)'
+        } else if(hora < 18) {
+            document.body.style.backgroundColor = 'rgb(245, 175, 129)'
+        } else {
+            document.body.style.backgroundColor = 'rgb(46, 2, 66)'
+        }
+    </script>
 </body>
 </html>
