@@ -48,10 +48,13 @@ div#horas {
 div#imagem {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.288);
-    width: 100%;
-    height: 80%;
-    transform: translateY(25%);
-    border-radius: 10px;
+    left: 50%;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    max-height: calc(100%);
+    transform: translate(-50%, 10%);
+    border-radius: 100%;
 }
 
 h3 {
