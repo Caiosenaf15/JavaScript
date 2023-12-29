@@ -7,11 +7,13 @@
     <title>Hora do Dia</title>
 </head>
 <body>
-    <h1 class="texto">Hora do dia</h1>
+    <h1 id="texto">Hora do dia</h1>
     <div id="conteudo">
         <div id="horas"></div>
         <div id="imagem">
-            <img src="" alt="">
+            <img src="https://www.novotempo.com/wp-content/uploads/2020/04/Amanhecer01.jpg" alt="" id="imgManha">
+            <img src="https://i.pinimg.com/originals/c7/53/d5/c753d5719a1a6d5327d9b2c74c09e82b.jpg" alt="" id="imgTarde">
+            <img src="https://img.freepik.com/fotos-premium/lindo-ceu-noturno-com-estrelas-ilustracao-infantil_863013-121994.jpg" alt="" id="imgNoite">
         </div>
     </div>
     <h3 class="texto">@Caiosenaf</h3>
@@ -21,13 +23,24 @@
         var hora = d.getHours()
         var res = document.getElementById('horas')
         res.innerHTML = `Agora são: ${horas}`
-        var textoFora = document.getElementsByClassName('texto')
+        var manha = document.getElementById('imgManha')
+        var tarde = document.getElementById('imgTarde')
+        var noite = document.getElementById('imgNoite')
         if(hora < 12){
             document.body.style.backgroundColor = 'rgb(252, 225, 190)'
+            manha.style.display = 'block'
+            tarde.style.display = 'none'
+            noite.style.display = 'none'
         } else if(hora < 18) {
             document.body.style.backgroundColor = 'rgb(245, 175, 129)'
+            manha.style.display = 'none'
+            tarde.style.display = 'block'
+            noite.style.display = 'none'
         } else {
             document.body.style.backgroundColor = 'rgb(146, 102, 166)'
+            manha.style.display = 'none'
+            tarde.style.display = 'none'
+            noite.style.display = 'block'
         }
     </script>
 </body>
