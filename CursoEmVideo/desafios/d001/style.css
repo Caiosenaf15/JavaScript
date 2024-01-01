@@ -49,10 +49,8 @@ div#imagem {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.288);
     left: 50%;
-    height: 100vh;
-    width: 100vw;
-    max-width: 100%;
-    max-height: calc(100%);
+    width: 100%;
+    padding-top: 100%;
     transform: translate(-50%, 10%);
     border-radius: 100%;
 }
