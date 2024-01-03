@@ -1,63 +1,103 @@
 @charset 'UTF-8';
+@media all {
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
 
-* {
-    margin: 0px;
-    padding: 0px;
+    body {
+        position: relative;
+        background-color: rgb(46, 2, 66);
+        transition: 1s;
+        font-size: 1.2em;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    h1 {
+        position: absolute;
+        display: block;
+        top: 5vh;
+        left: 50vw;
+        transform: translateX(-50%);
+    }
+
+    div#conteudo {
+        position: absolute;
+        display: block;
+        top: 40vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        width: 70vw;
+        height: 50vh;
+        max-width: 600px;
+        min-height: 200px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        font-size: 1.3em;
+        transition: 0.5s;
+    }
+
+    div#horas {
+        display: block;
+        position: absolute;
+        top: 9%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    img {
+        transition: 1s;
+    }
+
+    div#imagem {
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        height: 80%;
+        width: 100vw;
+        max-width: 100%;
+        max-height: 100%;
+        transform: translate(-50%, -100%);
+    }
+
+    div#imagem>img {
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: min(90%, 100%);
+        border-radius: 100%;
+    }
+
+    h3 {
+        position: absolute;
+        top: 68vh;
+        left: 50vw;
+        transform: translateX(-50%);
+    }
 }
 
-body {
-    position: relative;
-    background-color: rgb(46, 2, 66);
-    transition: 1s;
-    font-size: 1.2em;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+@media screen and (max-width: 550px) {
+    body {
+        color: aqua;
+    }
+
+    div#conteudo {
+        font-size: 1em;
+    }
 }
 
-h1 {
-    position: absolute;
-    display: block;
-    top: 5vh;
-    left: 50vw;
-    transform: translateX(-50%);
-}
+@media screen and (max-height: 450px) {
+    body {
+        color: red;
+    }
 
-div#conteudo {
-    position: absolute;
-    display: block;
-    top: 40vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    width: 70vw;
-    max-width: 700px;
-    min-height: 300px;
-    height: 50vh;
-    background-color: aqua;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-div#horas {
-    display: block;
-    position: absolute;
-    top: 9%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    div#conteudo {
+        max-height: 50px;
+    }
     
-}
-
-div#imagem {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.288);
-    left: 50%;
-    width: 100%;
-    padding-top: 100%;
-    transform: translate(-50%, 10%);
-    border-radius: 100%;
-}
-
-h3 {
-    position: absolute;
-    top: 68vh;
-    left: 50vw;
-    transform: translateX(-50%);
 }
