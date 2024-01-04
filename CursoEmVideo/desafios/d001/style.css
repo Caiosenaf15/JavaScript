@@ -80,11 +80,10 @@
 
 
 @media screen and (max-width: 380px) {
-
+    
     h1, h3 {
         font-size: 1em;
     }
-
     div#conteudo {
         font-size: 0.8em;
         text-align: center;
@@ -111,13 +110,33 @@
 
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 280px){
     body {
         color: red;
     }
 
+    h1 {
+        top: 1vw;
+    }
+
+    h1, h3 {
+        font-size: 0.8em;
+    }
+
     div#conteudo {
-        max-height: 50px;
+        min-height: 30vh;
+        max-width: 50vw;
+        font-size: 0.5em;
     }
     
+}
+
+@media screen and (max-height: 160px) {
+    h1 {
+        top: 0vh;   
+    }
+
+    h1, h3 {
+        font-size: 0.5em;
+    }
 }
