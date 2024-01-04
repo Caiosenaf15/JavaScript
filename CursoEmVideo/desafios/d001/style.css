@@ -116,7 +116,7 @@
 
 }
 
-@media screen and (max-height: 280px){
+@media screen and (max-height: 450px){
 
     h1 {
         top: 1vw;
