@@ -34,7 +34,7 @@ body {
     position: absolute;
     left: 50%;
     margin-top: 20px;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
     font-size: 1.2em;
 }
 
@@ -64,13 +64,27 @@ h3 {
 }
 
 @media screen and (max-height: 500px) {
-    body {
-        color: red;
+ 
+    #conteudo {
+        height: 200px;
+    }
+    #texto{ 
+        display: none;
+    }
+
+    #horas {
+        left: 5%;
+        top: 50%;
+        margin: 0px;
+        transform: translateY(-50%);
     }
 
     #imagem img {
-        width: 200px;
-        height: 200px;
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        left: 70%;
+        transform: translateY(-50%);
     }
 
 }
