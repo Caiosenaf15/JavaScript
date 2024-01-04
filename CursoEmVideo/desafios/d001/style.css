@@ -111,9 +111,6 @@
 }
 
 @media screen and (max-height: 280px){
-    body {
-        color: red;
-    }
 
     h1 {
         top: 1vw;
