@@ -69,7 +69,10 @@ h3 {
         height: 200px;
     }
     #texto{ 
-        display: none;
+        position: absolute;
+        left: 50%;
+        top: 1%;
+        transform: translateX(-50%);
     }
 
     #horas {
@@ -87,4 +90,10 @@ h3 {
         transform: translateY(-50%);
     }
 
+}
+
+@media screen and (max-height: 340px) {
+    #texto {
+        display: none;
+    }
 }
