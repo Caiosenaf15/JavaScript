@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Verificador de idade</title>
+</head>
+<body>
+    <div class="cabecalho">Verificador de idade</div>
+    <div class="quadro">
+        <form action="" class="formulario">
+            <div class="ano">
+                <label for="idade">Ano de Nascimento: </label><input type="number" name="idade" id="idade" required min="1900" max="2024" value="2023">
+            </div>
+            <div class="sexo">
+                <fieldset>
+                    <p>Sexo:</p>
+                    <input type="radio" name="sexo" id="sexoM" checked> <label for="sexoM">Masculino</label>
+                    <input type="radio" name="sexo" id="sexoF"> <label for="sexoF">Feminino</label>
+                </fieldset>
+            </div>
+            <div class="botao">
+                <input type="submit" value="Verificar" onclick="enviar()">
+            </div>
+        </form>
+        <div class="resultado">
+            <div class="textoResultado"></div>
+            <div class="imagem">
+                <img src="https://th.bing.com/th/id/OIG.T9H2MnORbAWUfI6AaKtR?pid=ImgGn" alt="" id="criancaHomem">
+                <img src="https://img.freepik.com/fotos-premium/menino-garoto-e-retrato-da-moda-em-fundo-branco-de-estudio-e-isolado-sozinho-modelo-de-crianca-bonito-e-estilo-de-vida-de-criancas-do-sexo-masculino-para-crescimento-saudavel-desenvolvimento-juvenil-ou-confianca-de-menino-de-escola-relaxado_590464-123200.jpg" alt="" id="criancaMulher">
+                <img src="" alt="" id="adolescenteHomem">
+                <img src="" alt="" id="adolescenteMulher">
+                <img src="" alt="" id="adultoHomem">
+                <img src="" alt="" id="adultoMulher">
+                <img src="" alt="" id="idosoHomem">
+                <img src="" alt="" id="idosoMulher">
+            </div>
+        </div>
+    </div>
+</body>
+    <script>
+        function enviar(){
+            var ano = document.getElementById('idade').value
+            var idade = 2024 - Number(ano)
+            var cH = document.getElementById('criancaHomem')
+            var cM = document.getElementById('criancaMulher')
+            var aH = document.getElementById('adolescenteHomem')
+            var aM = document.getElementById('adolescenteMulher')
+            var adH = document.getElementById('adultoHomem')
+            var adM = document.getElementById('adultoMulher')
+            var iH = document.getElementById('idosoHomem')
+            var iM = document.getElementById('idosoMulher') 
+            if(idade < 14) {
+                cH.style.display = 'none'
+                cM.style.display = 'block'
+            }
+        }
+        
+    </script>
+</html>

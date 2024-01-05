@@ -1,0 +1,85 @@
+@charset 'UTF-8';
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(62, 133, 240);
+}
+
+.cabecalho {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin: 20px;
+}
+
+.quadro {
+    background-color: white;
+    width: 60%;
+    min-width: 400px;
+    max-width: 600px;
+    max-height: 80%;
+    min-height: 200px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.formulario {
+    padding: 10px;
+}
+
+.ano label {
+    margin-right: 5px;
+}
+
+.ano input {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 200px;
+    height: 20px;
+    font-size: 15px;
+    text-indent: 5px;
+    margin-bottom: 20px;
+}
+
+.sexo fieldset{
+    display: flex;
+    border: 0px;
+    margin-bottom: 30px;
+}
+
+.sexo p {
+    margin-right: 10px;
+}
+
+.sexo input {
+    margin-right: 5px;
+}
+
+.sexo label {
+    margin-right: 10px;
+}
+
+.botao input {
+    position: absolute;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    border: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.botao input:hover {
+    cursor: pointer;
+    background-color: rgb(207, 207, 207);
+}
