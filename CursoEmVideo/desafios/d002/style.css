@@ -83,3 +83,11 @@ body {
     cursor: pointer;
     background-color: rgb(207, 207, 207);
 }
+
+.imagem img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 100%;
+} 

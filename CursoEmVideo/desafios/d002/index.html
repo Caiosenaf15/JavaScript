@@ -24,38 +24,27 @@
                 <input type="submit" value="Verificar" onclick="enviar()">
             </div>
         </form>
+        <!--
+                    <img src="https://th.bing.com/th/id/OIG.T9H2MnORbAWUfI6AaKtR?pid=ImgGn" alt="" id="criancaHomem">
+
+                    <img src="https://img.freepik.com/fotos-premium/menino-garoto-e-retrato-da-moda-em-fundo-branco-de-estudio-e-isolado-sozinho-modelo-de-crianca-bonito-e-estilo-de-vida-de-criancas-do-sexo-masculino-para-crescimento-saudavel-desenvolvimento-juvenil-ou-confianca-de-menino-de-escola-relaxado_590464-123200.jpg" alt="" id="criancaMulher"> 
+                -->
         <div class="resultado">
             <div class="textoResultado"></div>
             <div class="imagem">
-                <img src="https://th.bing.com/th/id/OIG.T9H2MnORbAWUfI6AaKtR?pid=ImgGn" alt="" id="criancaHomem">
-                <img src="https://img.freepik.com/fotos-premium/menino-garoto-e-retrato-da-moda-em-fundo-branco-de-estudio-e-isolado-sozinho-modelo-de-crianca-bonito-e-estilo-de-vida-de-criancas-do-sexo-masculino-para-crescimento-saudavel-desenvolvimento-juvenil-ou-confianca-de-menino-de-escola-relaxado_590464-123200.jpg" alt="" id="criancaMulher">
-                <img src="" alt="" id="adolescenteHomem">
-                <img src="" alt="" id="adolescenteMulher">
-                <img src="" alt="" id="adultoHomem">
-                <img src="" alt="" id="adultoMulher">
-                <img src="" alt="" id="idosoHomem">
-                <img src="" alt="" id="idosoMulher">
             </div>
         </div>
     </div>
 </body>
     <script>
-        function enviar(){
-            var ano = document.getElementById('idade').value
-            var idade = 2024 - Number(ano)
-            var cH = document.getElementById('criancaHomem')
-            var cM = document.getElementById('criancaMulher')
-            var aH = document.getElementById('adolescenteHomem')
-            var aM = document.getElementById('adolescenteMulher')
-            var adH = document.getElementById('adultoHomem')
-            var adM = document.getElementById('adultoMulher')
-            var iH = document.getElementById('idosoHomem')
-            var iM = document.getElementById('idosoMulher') 
-            if(idade < 14) {
-                cH.style.display = 'none'
-                cM.style.display = 'block'
-            }
+    function enviar(){
+        var ano = document.getElementById('idade').value
+        var idade = 2024 - Number(ano)
+        var local = document.querySelector('div.imagem')
+        if(idade < 14) {
+            local.innerHTML = `<img src="https://th.bing.com/th/id/OIG.T9H2MnORbAWUfI6AaKtR?pid=ImgGn" alt="">`
+            local.innerHTML = `Sua idade é ${idade}`
         }
-        
+    }
     </script>
 </html>
