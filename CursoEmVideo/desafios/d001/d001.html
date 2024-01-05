@@ -7,16 +7,17 @@
     <title>Hora do Dia</title>
 </head>
 <body>
-    <h1 id="texto">Hora do dia</h1>
+    <p id="cabecalho" class="textoBranco">Hora do dia</p>
     <div id="conteudo">
         <div id="horas"></div>
         <div id="imagem">
+            <img src="https://oeco.org.br/wp-content/uploads/oeco-migration/images/stories/mai2014/madrugada-beija-flor.jpg" alt="" id="imgMadrugada">
             <img src="https://www.novotempo.com/wp-content/uploads/2020/04/Amanhecer01.jpg" alt="" id="imgManha">
             <img src="https://i.pinimg.com/originals/c7/53/d5/c753d5719a1a6d5327d9b2c74c09e82b.jpg" alt="" id="imgTarde">
             <img src="https://img.freepik.com/fotos-premium/lindo-ceu-noturno-com-estrelas-ilustracao-infantil_863013-121994.jpg" alt="" id="imgNoite">
         </div>
     </div>
-    <h3>@Caiosenaf</h3>
+    <p id="hashtag" class="textoBranco">@Caiosenaf</p>
     <script>
         var d = new Date()
         var horas = d.getHours().toString().padStart(2, '0') + ':' + d.getMinutes().toString().padStart(2, '0');
@@ -26,18 +27,32 @@
         var manha = document.getElementById('imgManha')
         var tarde = document.getElementById('imgTarde')
         var noite = document.getElementById('imgNoite')
-        if(hora < 12){
+        var madrugada = document.getElementById('imgMadrugada')
+        var texto1 = document.querySelector('p')
+        var texto2 = document.getElementById('hashtag')
+        if(hora < 6){
+            document.body.style.backgroundColor = 'rgb(42, 7, 70)'
+            madrugada.style.display = 'block'
+            manha.style.display = 'none'
+            tarde.style.display = 'none'
+            noite.style.display = 'none'
+            texto1.style.color = 'white'
+            texto2.style.color = 'white'
+        } else if (hora < 12){
             document.body.style.backgroundColor = 'rgb(252, 225, 190)'
+            madrugada.style.display = 'none'
             manha.style.display = 'block'
             tarde.style.display = 'none'
             noite.style.display = 'none'
         } else if(hora < 18) {
             document.body.style.backgroundColor = 'rgb(245, 175, 129)'
+            madrugada.style.display = 'none'
             manha.style.display = 'none'
             tarde.style.display = 'block'
             noite.style.display = 'none'
         } else {
             document.body.style.backgroundColor = 'rgb(146, 102, 166)'
+            madrugada.style.display = 'none'
             manha.style.display = 'none'
             tarde.style.display = 'none'
             noite.style.display = 'block'

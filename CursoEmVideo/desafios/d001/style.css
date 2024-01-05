@@ -13,10 +13,13 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
 
-#texto {
+p#cabecalho {
     margin: 10px;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 #conteudo {
@@ -51,8 +54,10 @@ body {
     border-radius: 100%;
 }
 
-h3 {
+p#hashtag {
     margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /* Media Queries */
@@ -68,12 +73,14 @@ h3 {
     #conteudo {
         height: 200px;
     }
-    #texto{ 
+    p#cabecalho{ 
         position: absolute;
         left: 50%;
-        top: 1%;
         transform: translateX(-50%);
+        top: 10%;
     }
+
+    
 
     #horas {
         left: 5%;
@@ -92,8 +99,8 @@ h3 {
 
 }
 
-@media screen and (max-height: 340px) {
-    #texto {
+@media screen and (max-height: 380px) {
+    p#cabecalho {
         display: none;
     }
 }
