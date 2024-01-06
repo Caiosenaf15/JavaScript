@@ -11,13 +11,13 @@
     <div class="quadro">
         <form action="" class="formulario">
             <div class="ano">
-                <label for="idade">Ano de Nascimento: </label><input type="number" name="idade" id="idade" required min="1900" max="2024" value="2023">
+                <label for="idade">Ano de Nascimento: </label><input type="number" name="idade" id="idade" required min="1900" max="2024">
             </div>
             <div class="sexo">
                 <fieldset>
                     <p>Sexo:</p>
-                    <input type="radio" name="sexo" id="sexoM" checked> <label for="sexoM">Masculino</label>
-                    <input type="radio" name="sexo" id="sexoF"> <label for="sexoF">Feminino</label>
+                    <input type="radio" name="sexo" id="sexoM" checked value="H"> <label for="sexoM">Masculino</label>
+                    <input type="radio" name="sexo" id="sexoF" value="M"> <label for="sexoF">Feminino</label>
                 </fieldset>
             </div>
         </form>
@@ -30,15 +30,32 @@
     function enviar(){
         var ano = document.getElementById('idade').value
         var idade = 2024 - Number(ano)
-        var sexo = document.querySelector('')
+        var sexo = document.querySelector('input[name="sexo"]:checked').value
         var local = document.querySelector('div.resultado')
         local.style.display = 'block'
-        //`<img src="" alt=""> <p>Sua idade é: ${idade} anos!</p>`
-        if(idade < 12 && sexo == m) {
+        if(sexo == 'H') { // Homem
+            if(idade < 12) { // crianca
             local.innerHTML = `<img src="https://th.bing.com/th/id/OIG.T9H2MnORbAWUfI6AaKtR?pid=ImgGn" alt=""> <p>Sua idade é: ${idade} anos!</p>`
-        } else if(idade < 18) {
-            local.innerHTML = `<img src="" alt=""> <p>Sua idade é: ${idade} anos!</p>`
+            } else if(idade < 18) { // adolescente
+                local.innerHTML = `<img src="https://th.bing.com/th/id/OIG.kf51JgBRP8RAHmVbCJgG?pid=ImgGn" alt=""> <p>Sua idade é: ${idade} anos!</p>`
+            } else if(idade < 60) { // adulto
+                local.innerHTML = `<img src="https://th.bing.com/th/id/OIG.KMLTSqX4djc7iGhRy3ze?pid=ImgGn" alt=""> <p>Sua idade é: ${idade} anos!</p>`
+            } else { // idoso
+                local.innerHTML = `<img src="https://th.bing.com/th/id/OIG.8XD40DM2Of85t1Oxhj52?pid=ImgGn" alt=""> <p>Sua idade é: ${idade} anos!</p>`
+            }
+
+        } else { // Mulher
+            if(idade < 12) { // crianca
+                local.innerHTML = `<img src="https://th.bing.com/th/id/OIG.IhluJ3shC57DueQoNqII?pid=ImgGn" alt=""> <p>Sua idade é: ${idade} anos!</p>`
+            } else if(idade < 18) { // adolescente
+                local.innerHTML = `<img src="https://th.bing.com/th/id/OIG.1FjwG8aSCpTVD6SMbvqw?pid=ImgGn" alt=""> <p>Sua idade é: ${idade} anos!</p>`
+            } else if(idade < 60) { // adulto
+                local.innerHTML = `<img src="https://th.bing.com/th/id/OIG.Y4naxJoMGUpGsotE1Kgx?pid=ImgGn" alt=""> <p>Sua idade é: ${idade} anos!</p>`
+            } else { // idoso
+                local.innerHTML = `<img src="https://th.bing.com/th/id/OIG.Jkfu9T8G4wRkmpVRyTdB?pid=ImgGn" alt=""> <p>Sua idade é: ${idade} anos!</p>`
+            }
         }
+        
     }
     </script>
 </html>
