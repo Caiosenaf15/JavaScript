@@ -20,18 +20,9 @@
                     <input type="radio" name="sexo" id="sexoF"> <label for="sexoF">Feminino</label>
                 </fieldset>
             </div>
-            <div class="botao">
-                <input type="submit" value="Verificar" onclick="enviar()">
-            </div>
         </form>
-        <!--
-                    <img src="https://th.bing.com/th/id/OIG.T9H2MnORbAWUfI6AaKtR?pid=ImgGn" alt="" id="criancaHomem">
-
-                    <img src="https://img.freepik.com/fotos-premium/menino-garoto-e-retrato-da-moda-em-fundo-branco-de-estudio-e-isolado-sozinho-modelo-de-crianca-bonito-e-estilo-de-vida-de-criancas-do-sexo-masculino-para-crescimento-saudavel-desenvolvimento-juvenil-ou-confianca-de-menino-de-escola-relaxado_590464-123200.jpg" alt="" id="criancaMulher"> 
-                -->
+        <div class="botao"><button onclick="enviar()">Verificar</button></div>
         <div class="resultado">
-            <div class="textoResultado"></div>
-            <div class="imagem"></div>
         </div>
     </div>
 </body>
@@ -39,8 +30,15 @@
     function enviar(){
         var ano = document.getElementById('idade').value
         var idade = 2024 - Number(ano)
-        var local = document.querySelector('div.textoResultado')
-        local.innerHTML = `Sua idade é ${idade}`
+        var sexo = document.querySelector('')
+        var local = document.querySelector('div.resultado')
+        local.style.display = 'block'
+        //`<img src="" alt=""> <p>Sua idade é: ${idade} anos!</p>`
+        if(idade < 12 && sexo == m) {
+            local.innerHTML = `<img src="https://th.bing.com/th/id/OIG.T9H2MnORbAWUfI6AaKtR?pid=ImgGn" alt=""> <p>Sua idade é: ${idade} anos!</p>`
+        } else if(idade < 18) {
+            local.innerHTML = `<img src="" alt=""> <p>Sua idade é: ${idade} anos!</p>`
+        }
     }
     </script>
 </html>
