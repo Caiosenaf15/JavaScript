@@ -31,8 +31,7 @@
                 -->
         <div class="resultado">
             <div class="textoResultado"></div>
-            <div class="imagem">
-            </div>
+            <div class="imagem"></div>
         </div>
     </div>
 </body>
@@ -40,11 +39,8 @@
     function enviar(){
         var ano = document.getElementById('idade').value
         var idade = 2024 - Number(ano)
-        var local = document.querySelector('div.imagem')
-        if(idade < 14) {
-            local.innerHTML = `<img src="https://th.bing.com/th/id/OIG.T9H2MnORbAWUfI6AaKtR?pid=ImgGn" alt="">`
-            local.innerHTML = `Sua idade é ${idade}`
-        }
+        var local = document.querySelector('div.textoResultado')
+        local.innerHTML = `Sua idade é ${idade}`
     }
     </script>
 </html>
