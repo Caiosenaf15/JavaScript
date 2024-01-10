@@ -115,3 +115,19 @@ body {
     object-position: center top;
     border-radius: 100%;
 }
+
+.linkGithub {
+    position: absolute;
+    top: 290px;
+}
+
+.linkGithub a {
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    text-decoration: none;
+}
+
+.linkGithub a:hover {
+    text-decoration: underline;
+}

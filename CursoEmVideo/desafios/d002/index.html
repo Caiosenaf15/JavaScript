@@ -25,6 +25,9 @@
         <div class="resultado">
         </div>
     </div>
+    <div class="linkGithub">
+        <a href="https://github.com/Caiosenaf15" target="_blank">@Caiosenaf15</a>
+    </div>
 </body>
     <script>
     function enviar(){
@@ -32,7 +35,14 @@
         var idade = 2024 - Number(ano)
         var sexo = document.querySelector('input[name="sexo"]:checked').value
         var local = document.querySelector('div.resultado')
-        local.style.display = 'block'
+        var link = document.querySelector('div.linkGithub')
+       if(idade == 2024) { // Verifica se o campo do ano está vazio
+            alert('Adicione um ano válido')
+            process.exit()
+        } else {
+             local.style.display = 'block'
+            link.style.top = '580px'
+        }
         if(sexo == 'H') { // Homem
             if(idade < 12) { // crianca
             local.innerHTML = `<img src="https://th.bing.com/th/id/OIG.T9H2MnORbAWUfI6AaKtR?pid=ImgGn" alt=""> <p>Sua idade é: ${idade} anos!</p>`
